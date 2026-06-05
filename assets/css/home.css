@@ -1,0 +1,101 @@
+body{
+    background-color:#000;
+}
+
+header{
+    width: 100%;
+    padding: 24px 72px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 96px;
+    transform: translateY(30px);
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo img{
+    width: 130px;
+    display: block;
+}
+
+.hero{
+    width: 100%;
+    height: calc(100vh - 120px);
+    overflow: hidden;
+
+      background-image:url("../images/home/bg_space.png");
+    background-size:120%;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.cat-container{
+    width:100%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.cat-image{
+    width: 420px; 
+    display: block;
+}
+
+.hero-text{
+    margin-top: 32px;
+    text-align: center;
+}
+
+.hero-text h1{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-text p{
+    margin-top:3px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.cat-wrapper{
+    position: relative;
+}
+
+.cat-run{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cat-wrapper:hover .cat-idel{
+    display: none;
+}
+
+.cat-wrapper:hover .cat-run{
+    opacity: 1;
+}
+
+.cat-wrapper{
+    cursor:pointer;
+}
