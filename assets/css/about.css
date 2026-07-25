@@ -1,0 +1,142 @@
+
+.about{
+    padding-bottom: 120px;
+}
+
+.about-hero{
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card img{
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.about-title{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.about-title h1{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.highlight{
+    color: #FF7A00;
+}
+
+.about-button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-work{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 32px;
+    background-color: #FF7A00;
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-work img{
+    width: 20px;
+    height: 20px;
+}
+
+/* 프로젝트 소개 */
+
+.experience{
+    margin-top: 30px;
+    padding: 60px 60px;
+}
+
+.section-title{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.section-title img{
+    width: 36px;
+    height: 36px;
+}
+
+.section-title h2{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.experience-projects{
+    margin-top: 24px;
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+}
+
+.experience-projects li{
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.experience-projects li + li{
+    margin-top: 8px;
+}
+
+.experience-divider{
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.experience-list{
+    display: flex;
+    gap: 60px;
+}
+
+.experience-card{
+    flex: 1;
+}
+
+/* 스킬 */
+
+.tools{
+    padding: 60px;
+}
+
+.tools-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.tool-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool-item img{
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}

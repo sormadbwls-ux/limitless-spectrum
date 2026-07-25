@@ -1,0 +1,156 @@
+.work-page{
+    width:100%;
+    min-width:1440px;
+    height:100vh;
+    overflow:hidden;
+    background:#0b060b;
+}
+
+.coloso{
+    position:relative;
+    width:1920px;
+    height:1080px;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+/* ===========================
+   Background
+=========================== */
+
+.coloso-bg{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+
+.coloso-bg::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.coloso-bg img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+/* ===========================
+   Left
+=========================== */
+
+.coloso-info{
+    position:absolute;
+    left:80px;
+    top:220px;
+    width:520px;
+    z-index:5;
+}
+
+.coloso-logo{
+    display:block;
+    width:320px;
+    margin-bottom:45px;
+}
+
+.coloso-copy{
+    margin-bottom:28px;
+    font-size:24px;
+    font-weight:500;
+    line-height:1.5;
+    color:#fff;
+}
+
+.coloso-title{
+    margin-bottom:80px;
+    font-size:72px;
+    font-weight:800;
+    line-height:1.15;
+    color:#fff;
+}
+
+.coloso-title span{
+    color:#ff58cb;
+}
+
+.coloso-btn{
+    width:390px;
+    height:88px;
+    border:2px solid #ff58cb;
+    border-radius:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 34px;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(10px);
+    color:#fff;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:700;
+    box-shadow:0 0 25px rgba(255,88,203,.35);
+}
+
+.coloso-btn img{
+    width:30px;
+}
+
+/* ===========================
+   Right
+=========================== */
+
+.coloso-preview{
+    position:absolute;
+    right:120px;
+    top:150px;
+    width:980px;
+    height:720px;
+    z-index:5;
+}
+
+.preview{
+    position:absolute;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+.preview img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* top */
+
+.preview-top{
+    width:560px;
+    left:90px;
+    top:0;
+    z-index:3;
+}
+
+/* right */
+
+.preview-right{
+    width:610px;
+    right:0;
+    top:255px;
+    z-index:2;
+}
+
+/* bottom */
+
+.preview-bottom{
+    width:560px;
+    left:130px;
+    bottom:0;
+    z-index:4;
+}
