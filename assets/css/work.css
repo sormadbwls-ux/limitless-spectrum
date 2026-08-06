@@ -1,156 +1,170 @@
-.work-page{
-    width:100%;
-    min-width:1440px;
-    height:100vh;
-    overflow:hidden;
-    background:#0b060b;
+html,
+body{
+    margin:0;
+    padding:0;
+    min-height:100%;
 }
 
-.coloso{
-    position:relative;
-    width:1920px;
-    height:1080px;
-    margin:0 auto;
-    overflow:hidden;
+body{
+    background-image:url("../images/home/bg_space.png");
+    background-repeat:repeat;
+    background-position:top left;
+    background-size:800px;
 }
 
-/* ===========================
-   Background
-=========================== */
-
-.coloso-bg{
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    z-index:1;
+main{
+    min-height:100vh;
 }
 
-.coloso-bg::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.55);
+.project-card{
+    width:min(1400px, 92vw);
+    min-width: 1440px;
+    aspect-ratio:16 / 9;
+
+    margin:80px auto;
+
+    background:url("../images/work/project-box01") center/100% 100% no-repeat;
 }
 
-.coloso-bg img{
+.project-content{
     width:100%;
     height:100%;
+
+    padding:90px 110px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    box-sizing:border-box;
+}
+
+.project-container{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.project-body{
+    display:flex;
+
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:60px;
+}
+
+.project-title{
+    margin:0 0 40px 0;
+
+    color:#fff;
+
+    font-size:54px;
+    font-weight:700;
+}
+
+.project-thumbnail-wrap{
+    width:100%;
+    aspect-ratio:16/9;
+    flex:7;
+    overflow:hidden;
+
+    border-radius:8px;
+}
+
+.project-thumbnail{
+    display:block;
+
+    width:100%;
+    height:100%;
+
     object-fit:cover;
     object-position:center;
+
+    transition:.3s;
 }
 
-/* ===========================
-   Left
-=========================== */
-
-.coloso-info{
-    position:absolute;
-    left:80px;
-    top:220px;
-    width:520px;
-    z-index:5;
+.project-left{
+    flex:7;
 }
 
-.coloso-logo{
-    display:block;
-    width:320px;
-    margin-bottom:45px;
+.project-right{
+    flex:3;
+
+    display:flex;
+    flex-direction:column;
+
+    height:100%;
 }
 
-.coloso-copy{
-    margin-bottom:28px;
-    font-size:24px;
-    font-weight:500;
-    line-height:1.5;
-    color:#fff;
+/* 프로젝트 설명문구 */
+
+.project-star{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
 }
 
-.coloso-title{
-    margin-bottom:80px;
-    font-size:72px;
-    font-weight:800;
-    line-height:1.15;
-    color:#fff;
+.project-star img{
+    width: 34px;
+    height: auto;
 }
 
-.coloso-title span{
-    color:#ff58cb;
+.project-description{
+    font-size: 24px;
+    line-height: 1.7;
+        display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:7;   /* 최대 7줄 */
+    overflow:hidden;
+    margin-bottom: 60px;
 }
 
-.coloso-btn{
-    width:390px;
-    height:88px;
-    border:2px solid #ff58cb;
-    border-radius:18px;
+/* 버튼 */
+.project-btn{
+    margin-top: auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0 34px;
-    background:rgba(0,0,0,.45);
-    backdrop-filter:blur(10px);
-    color:#fff;
+
+    width:320px;
+    height:68px;
+
+    padding:0 32px;
+
+    border:2px solid #ff5fb7;
+    border-radius:18px;
+
+    color:#ff79c9;
     text-decoration:none;
-    font-size:24px;
+
+    background:#17141c;
+
+    font-size:22px;
     font-weight:700;
-    box-shadow:0 0 25px rgba(255,88,203,.35);
+
+    box-shadow:
+        0 0 8px rgba(255,95,183,.6),
+        inset 0 0 8px rgba(255,95,183,.25);
+
+    transition:.25s;
 }
 
-.coloso-btn img{
-    width:30px;
+.project-btn:hover{
+    background:#211929;
+
+    box-shadow:
+        0 0 20px rgba(255,95,183,.9),
+        inset 0 0 12px rgba(255,95,183,.45);
+
+    transform:translateY(-2px);
 }
 
-/* ===========================
-   Right
-=========================== */
-
-.coloso-preview{
-    position:absolute;
-    right:120px;
-    top:150px;
-    width:980px;
-    height:720px;
-    z-index:5;
+.arrow{
+    font-size:36px;
+    transition:.25s;
 }
 
-.preview{
-    position:absolute;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 25px 60px rgba(0,0,0,.45);
+.project-btn:hover .arrow{
+    transform:translateX(8px);
 }
-
-.preview img{
-    display:block;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* top */
-
-.preview-top{
-    width:560px;
-    left:90px;
-    top:0;
-    z-index:3;
-}
-
-/* right */
-
-.preview-right{
-    width:610px;
-    right:0;
-    top:255px;
-    z-index:2;
-}
-
-/* bottom */
-
-.preview-bottom{
-    width:560px;
-    left:130px;
-    bottom:0;
-    z-index:4;
-}
+/*  */
