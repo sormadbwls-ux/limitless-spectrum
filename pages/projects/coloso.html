@@ -1,123 +1,129 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Coloso | Portfolio</title>
+    <title>Coloso | Limitless Spectrum</title>
 
-    <link rel="stylesheet" href="/assets/css/reset.css">
     <link rel="stylesheet" href="/assets/css/common.css">
-    <link rel="stylesheet" href="/assets/css/projects/coloso.css">
-    <link rel="stylesheet" href="/assets/css/components/top-button.css">
+    <link rel="stylesheet" href="/assets/css/projects/detail.css">
 </head>
 
 <body>
 
-    <header class="project-header">
-        <a href="/pages/work.html" class="back-btn">
+    <!-- Back Navigation -->
+    <nav class="detail-nav">
+        <a href="../work.html" class="back-btn">
             ← Back
         </a>
-    </header>
+    </nav>
 
-    <main>
+    <main class="detail-page">
 
-        <section class="hero">
+        <div class="detail-content">
 
-            <!-- 배경 이미지는 CSS -->
-            <div class="hero-content">
+            <!-- Project Header -->
+            <header class="project-header">
 
-                <div class="hero-left">
-                    <img src="/assets/images/work/coloso-logo.png" alt="Coloso 로고">
-                    <p class="hero-copy">
-                        망설임은 확신으로, 부담은 혜택으로 전환
-                    </p>
-                    <h1>
-                        크리에이티브 챌린지 랜딩페이지 디자인
-                    </h1>
-                </div>
+                <h1 class="project-title">
+                    콜로소 랜딩 페이지 디자인 작업
+                </h1>
 
-                <div class="hero-right">
+                <div class="title-line"></div>
 
-                    <dl>
-                        <dt>Project</dt>
-                        <dd>Creative Challenge<br>Landing Page Design</dd>
-                    </dl>
+            </header>
 
-                    <dl>
-                        <dt>기간</dt>
-                        <dd>5 Days</dd>
-                    </dl>
-
-                    <dl>
-                        <dt>툴</dt>
-                        <dd>Figma · Photoshop · Illustrator</dd>
-                    </dl>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="overview">
-
-            <div class="inner">
-
-                <h2>Project Overview</h2>
-
-                <p>
-                    Coloso의 환불 챌린지 이벤트에서 영감을 받아, 참여 동기를 높이는
-                    'Creative Challenge' 랜딩페이지를 새롭게 기획하고 디자인한 프로젝트입니다.
-                </p>
-
-                <p>
-                    사용자의 심리적 부담을 줄이고 도전 의지를 높일 수 있도록
-                    이벤트 구조와 사용자 경험을 중심으로 설계했습니다.
-                </p>
-
-            </div>
-
-        </section>
-
-        <section class="landing">
-
-            <div class="inner">
-
-                <h2>Landing Page</h2>
+            <!-- Hero -->
+            <section class="hero">
 
                 <img
-                    src="/assets/images/projects/coloso/landing.webp"
-                    alt="Landing Page">
+                    class="hero-image"
+                    src="/assets/images/projects/detail_hero01.png"
+                    alt="콜로소 히어로 배너">
 
-            </div>
+            </section>
 
-        </section>
+            <!-- 프로젝트 소개 -->
+            <section class="detail-block project-summary">
 
-        <section class="process">
+                <h2 class="block-title">
+                    프로젝트 소개
+                </h2>
 
-            <div class="inner">
+                <p class="block-text">
+                    콜로소의 환급형 강의는 높은 수강료로 인해 구매를 망설이는 사용자가 많다는 점에 주목했습니다.
+                    <br>
+                    본 프로젝트는 이러한 심리적 진입장벽을 낮추기 위해
+                    환급 혜택과 완강 시 얻을 수 있는 가치를 핵심 메시지로 강조하는 랜딩페이지를 기획했습니다.
+                    <br>
+                    사용자가 '비용'보다 '얻을 수 있는 가치'를 먼저 인식하도록
+                    정보의 우선순위를 재구성했으며, 행동을 자연스럽게 유도하는 흐름을 설계했습니다.
+                    <br>
 
-                <h2>Process Design</h2>
+                    페이지 하단에는 남은 신청 기간과 CTA 버튼을 반복적으로 배치하여
+                    사용자의 이탈을 줄이고 즉시 신청으로 이어질 수 있도록 구성했습니다.
+                </p>
+
+            </section>
+
+            <!-- 실제 디자인 작업물 -->
+            <section class="detail-block project-showcase">
+                <h2 class="block-title">
+                    실제 디자인 작업물
+                </h2>
 
                 <img
-                    src="/assets/images/projects/coloso/process.webp"
-                    alt="Process Design">
+                class="detail-image work-image"
+                src="/assets/images/work/coloso-main-01.png"
+                alt="콜로소 디자인 작업물 미리보기">
+            
+            </section>
 
-            </div>
+            <!-- 프로세스 디자인 -->
+            <section class="detail-block process-design">
+                <h2 class="block-title">
+                    프로세스 디자인
+                </h2>
 
-        </section>
+                <div class="work-image-wrap">
+                    <img
+                    class="detail-image"
+                    src="/assets/images/work/coloso-main-02.png"
+                    alt="콜로소 프로세스 디자인 이미지">
+
+                </div>
+            </section>
+
+
+        </div>
 
     </main>
+    <!-- 이미지 미리보기 기능 추가 -->
+     <!-- Image Modal -->
+<div class="image-modal" id="imageModal">
 
-    <!-- Top Button -->
-    <button class="top-btn" aria-label="맨 위로">
-        <img src="/assets/images/common/top-arrow.svg" alt="">
+    <button class="image-modal-close" id="imageModalClose">
+        ×
     </button>
 
-    <script src="/assets/js/top-button.js"></script>
+    <div class="image-modal-content">
+        <img
+            id="modalImage"
+            src="/assets/images/work/coloso-main-01.png"
+            alt="확대된 디자인 작업물"
+        >
+    </div>
+
+</div>
+
+    <!-- Top Button -->
+    <button class="top-btn">
+        TOP
+    </button>
+
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/detail.js"></script>
 
 </body>
-
 </html>
