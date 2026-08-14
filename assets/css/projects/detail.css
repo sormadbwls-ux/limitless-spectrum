@@ -128,7 +128,7 @@ body{
 }
 
 .detail-block + .detail-block{
-    margin-top:80px;
+    margin-top:200px;
 }
 
 /* 임시 레이아웃 확인용 */
@@ -221,6 +221,7 @@ body{
     width:100%;
     height:auto;
     margin-top: 32px;
+    cursor:zoom-in
 }
 
 /* ---------------- */
