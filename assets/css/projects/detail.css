@@ -281,3 +281,17 @@ body{
 
     z-index:2001;
 }
+
+/* 상세페이지 원본 미리보기 관련 */
+
+.detail-page-images{
+    width:100%;
+    margin-top:40px;
+}
+
+.detail-page-images img{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0;
+}
