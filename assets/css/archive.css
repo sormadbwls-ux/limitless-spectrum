@@ -807,6 +807,28 @@ body {
 }
 
 /* 상세페이지 이미지가 다중일 경우 그 사이의 간격을 조정하는곳 */
-#archiveModalImage2 {
-    margin-top: 60px;
+#archiveModalImages img + img {
+    margin-top: 40px;
+}
+
+#archiveModalImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#archiveModalImages img {
+    max-width: 100%;
+    height: auto;
+}
+
+.archive-modal-info {
+    padding-top: 12px;
+}
+
+.archive-modal-inner {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
