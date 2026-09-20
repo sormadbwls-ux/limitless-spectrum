@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Limitless Spectrum</title>
-
     <link rel="stylesheet" href="assets/css/common.css">
-
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 
 <body>
+<!-- 헤더영역-->
+    <div id="header"></div>
 
-    <h1>Limitless Spectrum</h1>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
+
+<main>
+    <section class="hero"></section>
+</main>
 
 </body>
+
 </html>
