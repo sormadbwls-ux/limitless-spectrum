@@ -16,28 +16,8 @@ body {
     color: #fff;
 }
 
-.container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 72px;
-}
 
-.hero {
-    width: 100%;
-    min-height: calc(100vh - 120px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero h1 {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-/* 헤더 영역 */
+/* Header */
 
 header {
     width: 100%;
@@ -58,6 +38,7 @@ header {
     width: 100%;
     max-width: 1440px;
     height: 100%;
+
     margin: 0 auto;
     padding: 0 72px;
 
@@ -66,11 +47,17 @@ header {
     justify-content: space-between;
 }
 
+
+/* Logo */
+
 .logo img {
     display: block;
     width: 130px;
     height: auto;
 }
+
+
+/* Navigation */
 
 .navigation {
     display: flex;
@@ -92,6 +79,7 @@ header {
 .nav-star {
     width: 20px;
     height: 20px;
+
     object-fit: contain;
 
     margin-bottom: 8px;
@@ -124,12 +112,36 @@ header {
 
     background: #fff;
 }
-.navigation a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 700;
+
+
+/* Mobile Menu Button */
+
+.menu-toggle {
+    display: none;
+
+    width: 32px;
+    height: 24px;
+
+    padding: 0;
+    border: none;
+
+    background: transparent;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
 }
+
+.menu-toggle span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background: #fff;
+}
+
 
 /* Mobile */
 
@@ -148,10 +160,11 @@ header {
     }
 
     .navigation {
-        gap: 24px;
+        display: none;
     }
 
-    .navigation a {
-        font-size: 14px;
+    .menu-toggle {
+        display: flex;
     }
+
 }
