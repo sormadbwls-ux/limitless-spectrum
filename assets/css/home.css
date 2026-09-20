@@ -3,7 +3,7 @@
     min-height: calc(100vh - 120px);
 
     background-image: url("../image/home/bg_space.png");
-    background-size: 110% auto;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
