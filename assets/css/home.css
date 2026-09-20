@@ -18,9 +18,10 @@
 
 .cat-container {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -57,4 +58,21 @@
 
 .cat-wrapper:hover .cat-run {
     display: block;
+}
+
+.hero-text {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
 }
