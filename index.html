@@ -30,9 +30,30 @@
 
                 if (header) {
 
-                    /* 메인 페이지용 헤더 경로 */
+                    /*
+                     * header.html은 About 페이지 기준으로
+                     * ../assets/... 경로를 사용하고 있음.
+                     *
+                     * 메인 페이지에서는 ../를 제거해야 함.
+                     */
+
+                    header.querySelectorAll("img").forEach(img => {
+
+                        const src = img.getAttribute("src");
+
+                        if (src && src.startsWith("../")) {
+                            img.src = src.substring(3);
+                        }
+
+                    });
+
+
+                    /* 로고 */
 
                     header.querySelector(".logo").href = "index.html";
+
+
+                    /* 데스크톱 네비게이션 */
 
                     header.querySelectorAll(".navigation a").forEach(link => {
 
@@ -53,7 +74,7 @@
                     });
 
 
-                    /* 모바일 메뉴 */
+                    /* 모바일 네비게이션 */
 
                     header.querySelectorAll(".mobile-menu a").forEach(link => {
 
