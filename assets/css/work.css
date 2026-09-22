@@ -1,0 +1,516 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    background-image: url("../image/home/bg_space.png");
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: 800px;
+
+    color: #fff;
+}
+
+
+/* =========================
+   Work
+========================= */
+
+main {
+    min-height: 100vh;
+}
+
+
+/* =========================
+   Project Card
+========================= */
+
+.project-card {
+    position: relative;
+
+    width: min(1400px, 92vw);
+    min-width: 1440px;
+
+    aspect-ratio: 16 / 9;
+
+    margin: 80px auto;
+
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.project-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.project-content {
+    width: 100%;
+    height: 100%;
+
+    padding: 90px 110px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   Project Layout
+========================= */
+
+.project-body {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 60px;
+}
+
+.project-left {
+    flex: 7;
+}
+
+.project-right {
+    flex: 3;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+
+/* =========================
+   Project Title
+========================= */
+
+.project-title {
+    margin: 0 0 40px 0;
+
+    color: #fff;
+
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   Project Thumbnail
+========================= */
+
+.project-thumbnail-wrap {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    flex: 7;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+}
+
+.project-thumbnail {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: 0.3s;
+}
+
+
+/* =========================
+   Project Description
+========================= */
+
+.project-star {
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 28px;
+}
+
+.project-star img {
+    width: 34px;
+    height: auto;
+}
+
+.project-description {
+    font-size: 24px;
+    line-height: 1.7;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+
+    overflow: hidden;
+
+    margin-bottom: 60px;
+}
+
+
+/* =========================
+   Project Button
+========================= */
+
+.project-btn {
+    margin-top: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 320px;
+    height: 68px;
+
+    padding: 0 32px;
+
+    border: 2px solid #ff5fb7;
+    border-radius: 18px;
+
+    color: #ff79c9;
+    text-decoration: none;
+
+    background: #17141c;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    box-shadow:
+        0 0 8px rgba(255, 95, 183, 0.6),
+        inset 0 0 8px rgba(255, 95, 183, 0.25);
+
+    transition: 0.25s;
+
+    box-sizing: border-box;
+}
+
+.project-btn:hover {
+    background: #211929;
+
+    box-shadow:
+        0 0 20px rgba(255, 95, 183, 0.9),
+        inset 0 0 12px rgba(255, 95, 183, 0.45);
+
+    transform: translateY(-2px);
+}
+
+.arrow {
+    font-size: 36px;
+
+    transition: 0.25s;
+}
+
+.project-btn:hover .arrow {
+    transform: translateX(8px);
+}
+
+
+/* =========================
+   Maru Animation
+========================= */
+
+.project-motion {
+    position: absolute;
+
+    right: 40px;
+    bottom: -10px;
+
+    width: 120px;
+
+    z-index: 10;
+}
+
+.project-motion img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   05. SNS / Content Design
+========================= */
+
+.sns-project-card {
+    margin-bottom: 160px;
+}
+
+.sns-project-content {
+    display: block;
+}
+
+.sns-project-header {
+    margin-bottom: 50px;
+}
+
+.sns-project-header .project-title {
+    margin: 0;
+}
+
+.sns-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 60px;
+
+    width: 88%;
+
+    margin: 0 auto;
+}
+
+.sns-item {
+    text-align: center;
+}
+
+.sns-image-wrap {
+    width: 65%;
+    max-width: 500px;
+
+    margin: 0 auto;
+}
+
+.sns-image-wrap img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.sns-info {
+    margin-top: 20px;
+}
+
+.sns-info-block {
+    margin-bottom: 24px;
+}
+
+.sns-label {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.sns-label img {
+    width: 34px;
+    height: auto;
+}
+
+.sns-label span {
+    display: block;
+}
+
+.sns-info-block p {
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+
+/* =========================
+   SNS Image Modal
+========================= */
+
+.sns-preview-image {
+    cursor: zoom-in;
+}
+
+.sns-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    padding: 40px;
+
+    box-sizing: border-box;
+}
+
+.sns-modal.active {
+    display: flex;
+}
+
+.sns-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.sns-modal-close {
+    position: absolute;
+
+    top: 25px;
+    right: 35px;
+
+    border: 0;
+
+    background: none;
+
+    color: #fff;
+
+    font-size: 48px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+    .project-card {
+        width: calc(100% - 32px);
+        min-width: 0;
+
+        aspect-ratio: auto;
+
+        margin: 40px auto;
+    }
+
+    .project-content {
+        height: auto;
+
+        padding: 40px 24px;
+    }
+
+    .project-body {
+        flex-direction: column;
+
+        gap: 32px;
+    }
+
+    .project-left,
+    .project-right {
+        width: 100%;
+        flex: none;
+    }
+
+    .project-title {
+        margin-bottom: 24px;
+
+        font-size: 26px;
+        line-height: 1.4;
+    }
+
+    .project-thumbnail-wrap {
+        width: 100%;
+    }
+
+    .project-description {
+        font-size: 16px;
+        line-height: 1.7;
+
+        -webkit-line-clamp: none;
+
+        margin-bottom: 32px;
+    }
+
+    .project-star {
+        margin-bottom: 20px;
+    }
+
+    .project-star img {
+        width: 28px;
+    }
+
+    .project-btn {
+        width: 100%;
+        height: 56px;
+
+        padding: 0 20px;
+
+        border-radius: 14px;
+
+        font-size: 16px;
+    }
+
+    .arrow {
+        font-size: 28px;
+    }
+
+    .project-motion {
+        right: 20px;
+        bottom: -10px;
+
+        width: 80px;
+    }
+
+
+    /* SNS */
+
+    .sns-project-card {
+        margin-bottom: 80px;
+    }
+
+    .sns-project-content {
+        padding: 40px 20px;
+    }
+
+    .sns-project-header {
+        margin-bottom: 32px;
+    }
+
+    .sns-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        width: 100%;
+    }
+
+    .sns-image-wrap {
+        width: 80%;
+    }
+
+    .sns-info-block p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .sns-modal {
+        padding: 20px;
+    }
+
+    .sns-modal-close {
+        top: 15px;
+        right: 20px;
+
+        font-size: 40px;
+    }
+
+}
