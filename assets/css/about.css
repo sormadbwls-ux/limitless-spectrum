@@ -1,0 +1,241 @@
+/* About */
+
+.about {
+    width: 100%;
+    padding-bottom: 120px;
+}
+
+.about-hero {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card img {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* About Title */
+
+.about-title {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.about-title h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #FF7A00;
+}
+
+
+/* Work Button */
+
+.about-button {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.btn-work {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 18px 32px;
+
+    background-color: #FF7A00;
+    border-radius: 999px;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-work:hover {
+    opacity: 0.85;
+}
+
+.btn-work img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Experience */
+
+.experience {
+    margin-top: 30px;
+    padding: 60px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.section-title img {
+    width: 36px;
+    height: 36px;
+}
+
+.section-title h2 {
+    color: #fff;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.experience-divider {
+    width: 100%;
+    height: 1px;
+
+    background-color: #fff;
+
+    margin-bottom: 30px;
+}
+
+.experience-list {
+    display: flex;
+    gap: 60px;
+}
+
+.experience-card {
+    flex: 1;
+}
+
+.experience-card h3 {
+    color: #fff;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.period {
+    margin-top: 8px;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+.experience-projects {
+    margin-top: 24px;
+
+    list-style: none;
+
+    padding: 0;
+    margin-left: 0;
+}
+
+.experience-projects li {
+    color: #fff;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.experience-projects li + li {
+    margin-top: 8px;
+}
+
+
+/* Skill */
+
+.tools {
+    padding: 60px;
+}
+
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    margin-top: 40px;
+}
+
+.tool-item {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.tool-item img {
+    display: block;
+
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .about {
+        padding-bottom: 80px;
+    }
+
+    .about-title {
+        margin-top: 50px;
+        padding: 0 24px;
+    }
+
+    .about-title h1 {
+        font-size: 30px;
+        line-height: 1.5;
+    }
+
+    .about-button {
+        padding: 0 24px;
+    }
+
+    .btn-work {
+        padding: 15px 24px;
+        font-size: 16px;
+    }
+
+    .experience {
+        padding: 50px 24px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .experience-list {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .tools {
+        padding: 50px 24px;
+    }
+
+    .tools-list {
+        gap: 24px;
+    }
+
+}

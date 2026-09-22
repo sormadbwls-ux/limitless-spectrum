@@ -9,11 +9,13 @@
     <title>About | Limitless Spectrum</title>
 
     <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/about.css">
 
 </head>
 
-<body>
+<body class="about-page">
 
+    <!-- Header -->
     <div id="header"></div>
 
     <script>
@@ -28,7 +30,7 @@
 
                 if (header) {
 
-                    /* About 페이지용 이미지 경로 */
+                    /* 이미지 경로 */
 
                     header.querySelectorAll("img").forEach(img => {
 
@@ -71,7 +73,7 @@
                     });
 
 
-                    /* 모바일 메뉴 */
+                    /* 모바일 네비게이션 */
 
                     header.querySelectorAll(".mobile-menu a").forEach(link => {
 
@@ -92,7 +94,7 @@
                     });
 
 
-                    /* 햄버거 메뉴 */
+                    /* 햄버거 */
 
                     const menuButton = header.querySelector(".menu-toggle");
 
@@ -115,16 +117,217 @@
 
         <section class="about">
 
-            <div class="about-inner">
+            <div class="container">
 
-                <p class="about-label">ABOUT</p>
+                <!-- Profile -->
 
-                <h1>KIM YOU JIN</h1>
+                <div class="about-hero">
 
-                <p class="about-intro">
-                    콘텐츠 기획부터 비주얼 디자인까지<br>
-                    다양한 시각으로 이야기를 만들어가는 디자이너입니다.
-                </p>
+                    <div class="profile-card">
+
+                        <img
+                            src="../assets/image/about/about_profile-card.png"
+                            alt="프로필 카드"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Title -->
+
+                <div class="about-title">
+
+                    <h1>
+                        "<span class="highlight">콘텐츠 기획</span>부터<br>
+                        <span class="highlight">비주얼 설계</span>와
+                        <span class="highlight">배포</span>까지 가능한 디자이너"
+                    </h1>
+
+
+                    <!-- Work Button -->
+
+                    <div class="about-button">
+
+                        <a href="work.html" class="btn-work">
+                            <span>대표 작업물 상세보기</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Experience -->
+
+                <div class="experience">
+
+                    <div class="section-title">
+
+                        <img
+                            src="../assets/image/about/icon_section_tool.png"
+                            alt=""
+                        >
+
+                        <h2>실무 및 프로젝트 경험</h2>
+
+                    </div>
+
+
+                    <div class="experience-divider"></div>
+
+
+                    <div class="experience-list">
+
+
+                        <!-- NFINITY 7 -->
+
+                        <div class="experience-card">
+
+                            <h3>NFINITY 7</h3>
+
+                            <div class="period">
+                                2021~2024
+                            </div>
+
+                            <ul class="experience-projects">
+
+                                <li>
+                                    AI뇌파 그림 프로젝트 캐릭터 애니메이션 UI/UX
+                                </li>
+
+                                <li>
+                                    PROJECT NAI GUI 및 UI/UX 디자인 작업
+                                </li>
+
+                                <li>
+                                    건강체크 앱 UI/UX
+                                </li>
+
+                                <li>
+                                    아이기어스 UI/UX
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <!-- 애드준 -->
+
+                        <div class="experience-card">
+
+                            <h3>애드준</h3>
+
+                            <div class="period">
+                                2021
+                            </div>
+
+                            <ul class="experience-projects">
+
+                                <li>
+                                    현수막 배너 명함 편집 디자인
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <!-- 익센트릭게임그루 -->
+
+                        <div class="experience-card">
+
+                            <h3>익센트릭게임그루</h3>
+
+                            <div class="period">
+                                2017~2020
+                            </div>
+
+                            <ul class="experience-projects">
+
+                                <li>
+                                    킹스로드 캐릭터 디자인
+                                </li>
+
+                                <li>
+                                    아직도 소환중이랍니다 캐릭터 애니메이션 & 디자인
+                                </li>
+
+                                <li>
+                                    대구 고담시티 VR 공포 체험방 편집 디자인
+                                </li>
+
+                                <li>
+                                    경산누림터 편집 디자인
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Skill -->
+
+                <section class="tools">
+
+                    <div class="section-title">
+
+                        <img
+                            src="../assets/image/about/icon_section_tool.png"
+                            alt=""
+                        >
+
+                        <h2>Skill</h2>
+
+                    </div>
+
+
+                    <div class="experience-divider"></div>
+
+
+                    <div class="tools-list">
+
+    <div class="tool-item">
+        <img src="../assets/image/about/tool_photoshop.png" alt="Photoshop">
+    </div>
+
+    <div class="tool-item">
+        <img src="../assets/image/about/tool_figma.png" alt="Figma">
+    </div>
+
+    <div class="tool-item">
+        <img src="../assets/image/about/tool_illustrator.png" alt="Illustrator">
+    </div>
+
+    <div class="tool-item">
+        <img src="../assets/image/about/tool_clip.png" alt="Clip Studio">
+    </div>
+
+    <div class="tool-item">
+        <img src="../assets/image/about/tool_asprice.png" alt="Aseprite">
+    </div>
+
+    <div class="tool-item">
+        <img src="../assets/image/about/tool_notion.png" alt="Notion">
+    </div>
+
+    <div class="tool-item">
+        <img src="../assets/image/about/tool_spine.png" alt="Spine">
+    </div>
+
+    <div class="tool-item">
+        <img src="../assets/image/about/tool_aftereffect.png" alt="After Effects">
+    </div>
+
+</div>
+
+                </section>
 
             </div>
 
