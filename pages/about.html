@@ -6,21 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Limitless Spectrum</title>
+    <title>About | Limitless Spectrum</title>
 
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
 
 </head>
 
 <body>
 
-    <!-- 헤더 영역 -->
     <div id="header"></div>
 
     <script>
 
-        fetch("header.html")
+        fetch("../header.html")
             .then(response => response.text())
             .then(data => {
 
@@ -30,24 +28,44 @@
 
                 if (header) {
 
-                    /* 메인 페이지용 헤더 경로 */
+                    /* About 페이지용 이미지 경로 */
 
-                    header.querySelector(".logo").href = "index.html";
+                    header.querySelectorAll("img").forEach(img => {
+
+                        const src = img.getAttribute("src");
+
+                        if (src && src.startsWith("../")) {
+                            return;
+                        }
+
+                        if (src && src.startsWith("assets/")) {
+                            img.src = "../" + src;
+                        }
+
+                    });
+
+
+                    /* 로고 */
+
+                    header.querySelector(".logo").href = "../index.html";
+
+
+                    /* 데스크톱 네비게이션 */
 
                     header.querySelectorAll(".navigation a").forEach(link => {
 
                         const text = link.querySelector(".nav-text").textContent;
 
                         if (text === "About") {
-                            link.href = "pages/about.html";
+                            link.href = "about.html";
                         }
 
                         if (text === "Work") {
-                            link.href = "pages/work.html";
+                            link.href = "work.html";
                         }
 
                         if (text === "Archive") {
-                            link.href = "pages/archive.html";
+                            link.href = "archive.html";
                         }
 
                     });
@@ -60,15 +78,15 @@
                         const text = link.textContent;
 
                         if (text === "About") {
-                            link.href = "pages/about.html";
+                            link.href = "about.html";
                         }
 
                         if (text === "Work") {
-                            link.href = "pages/work.html";
+                            link.href = "work.html";
                         }
 
                         if (text === "Archive") {
-                            link.href = "pages/archive.html";
+                            link.href = "archive.html";
                         }
 
                     });
@@ -95,35 +113,18 @@
 
     <main>
 
-        <section class="hero">
+        <section class="about">
 
-            <div class="cat-container">
+            <div class="about-inner">
 
-                <div class="cat-wrapper">
+                <p class="about-label">ABOUT</p>
 
-                    <img
-                        src="assets/image/home/cat_portfolio_idle.png"
-                        alt="Portfolio cat"
-                        class="cat-image cat-idle"
-                    >
+                <h1>KIM YOU JIN</h1>
 
-                    <img
-                        src="assets/image/home/cat_portfolio_run.gif"
-                        alt="Portfolio cat"
-                        class="cat-image cat-run"
-                    >
-
-                </div>
-
-                <div class="hero-text">
-
-                    <h1>KIM YOU JIN | PORTFOLIO</h1>
-
-                    <p>
-                        콘텐츠 기획부터 비주얼 디자인까지 가능한 디자이너
-                    </p>
-
-                </div>
+                <p class="about-intro">
+                    콘텐츠 기획부터 비주얼 디자인까지<br>
+                    다양한 시각으로 이야기를 만들어가는 디자이너입니다.
+                </p>
 
             </div>
 
