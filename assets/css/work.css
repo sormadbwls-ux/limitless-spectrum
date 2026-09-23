@@ -393,14 +393,17 @@ main {
 
 @media (max-width: 768px) {
 
-    .project-card {
-        width: calc(100% - 32px);
-        min-width: 0;
+   .project-card {
+    width: calc(100% - 32px);
+    min-width: 0;
 
-        aspect-ratio: auto;
+    aspect-ratio: auto;
 
-        margin: 40px auto;
-    }
+    margin: 40px auto;
+
+    background-size: cover;
+    background-position: center;
+}
 
     .project-content {
         height: auto;
