@@ -28,11 +28,10 @@
 
 .cat-wrapper {
     position: relative;
-
     width: clamp(220px, 30vw, 480px);
     aspect-ratio: 1 / 1;
-
     cursor: pointer;
+    text-decoration: none;
 }
 
 .cat-image {
