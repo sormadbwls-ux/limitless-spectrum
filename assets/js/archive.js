@@ -17,40 +17,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
         card.addEventListener("click", () => {
 
+            const title = card.getAttribute("data-title");
+
             /* 이미지 데이터 */
+
             const images = JSON.parse(
                 card.getAttribute("data-images")
             );
 
+            /* 작품별 이미지 레이아웃 */
+
+            modalImages.className = "archive-modal-images";
+
+            if (title === "아달군") {
+                modalImages.classList.add("adalgun-images");
+            }
+
             /* 기존 이미지 제거 */
+
             modalImages.innerHTML = "";
 
 
             /* 이미지 생성 */
-            images.forEach(imageSrc => {
 
-                const img = document.createElement("img");
+            images.forEach((imageSrc, index) => {
 
-                img.src = imageSrc;
-                img.alt = card.getAttribute("data-title") || "";
+    const img = document.createElement("img");
 
-                modalImages.appendChild(img);
+    img.src = imageSrc;
+    img.alt = title || "";
 
-            });
+    if (title === "아달군" && index === 0) {
+        img.classList.add("adalgun-character");
+    }
+
+    modalImages.appendChild(img);
+
+});
 
 
             /* 정보 */
+
             modalType.textContent =
                 card.getAttribute("data-type") || "";
 
             modalTitle.textContent =
-                card.getAttribute("data-title") || "";
+                title || "";
 
             modalDescription.textContent =
                 card.getAttribute("data-description") || "";
 
 
             /* 외부 링크 */
+
             const link = card.getAttribute("data-link");
 
             if (link) {
@@ -67,10 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             /* 모달 열기 */
+
             modal.classList.add("active");
-
             modal.setAttribute("aria-hidden", "false");
-
             document.body.style.overflow = "hidden";
 
         });
@@ -110,9 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function closeModal() {
 
         modal.classList.remove("active");
-
         modal.setAttribute("aria-hidden", "true");
-
         document.body.style.overflow = "";
 
     }
