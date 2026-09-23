@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Archive | Limitless Spectrum</title>
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/archive.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <script>
+
+        fetch("../header.html")
+            .then(response => response.text())
+            .then(data => {
+
+                document.getElementById("header").innerHTML = data;
+
+                const header = document.querySelector("header");
+
+                if (header) {
+
+                    /* 이미지 경로 */
+                    header.querySelectorAll("img").forEach(img => {
+
+                        const src = img.getAttribute("src");
+
+                        if (src && src.startsWith("../")) {
+                            return;
+                        }
+
+                        if (src && src.startsWith("assets/")) {
+                            img.src = "../" + src;
+                        }
+
+                    });
+
+                    /* 로고 */
+                    header.querySelector(".logo").href = "../index.html";
+
+                    /* 데스크톱 메뉴 */
+                    header.querySelectorAll(".navigation a").forEach(link => {
+
+                        const text = link.querySelector(".nav-text").textContent;
+
+                        if (text === "About") {
+                            link.href = "about.html";
+                        }
+
+                        if (text === "Work") {
+                            link.href = "work.html";
+                        }
+
+                        if (text === "Archive") {
+                            link.href = "archive.html";
+                        }
+
+                    });
+
+                    /* 모바일 메뉴 */
+                    header.querySelectorAll(".mobile-menu a").forEach(link => {
+
+                        const text = link.textContent;
+
+                        if (text === "About") {
+                            link.href = "about.html";
+                        }
+
+                        if (text === "Work") {
+                            link.href = "work.html";
+                        }
+
+                        if (text === "Archive") {
+                            link.href = "archive.html";
+                        }
+
+                    });
+
+                    /* 햄버거 메뉴 */
+                    const menuButton = header.querySelector(".menu-toggle");
+
+                    if (menuButton) {
+
+                        menuButton.addEventListener("click", () => {
+                            header.classList.toggle("menu-open");
+                        });
+
+                    }
+
+                }
+
+            });
+
+    </script>
+
+
+    <main>
+
+
+        <!-- =====================
+             HERO
+        ====================== -->
+
+        <section class="archive-hero">
+
+            <h1>ARCHIVE</h1>
+
+        </section>
+
+
+        <!-- =====================
+             2026
+        ====================== -->
+
+        <section
+            class="archive-section"
+            id="year-2026">
+
+            <div class="archive-year-title">
+
+                <h2>2026</h2>
+
+            </div>
+
+
+            <div class="archive-grid">
+
+
+                <!-- Shall We Dance? -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/shall-we-dance.png"
+                        ]'
+                        data-title="Shall We Dance?"
+                        data-type="ILLUSTRATION">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/shall-we-dance.jpg"
+                                alt="쉘 위 댄스 썸네일">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>ILLUSTRATION</span>
+
+                        <h3>Shall We Dance?</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 요리조리 -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/yorijori.jpg"
+                        ]'
+                        data-title="요리조리"
+                        data-type="WEB DESIGN"
+                        data-description="레시피 정보를 쉽고 직관적으로 탐색할 수 있도록 구성한 웹 홈페이지입니다."
+                        data-link="https://sormadbwls-ux.github.io/cook/">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/yori.jpg"
+                                alt="요리조리 웹 홈페이지 썸네일">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>WEB DESIGN</span>
+
+                        <h3>요리조리</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 딸기우유 마시멜로우 -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/marshmallow-preview.jpg",
+                            "../assets/image/archive/full/marshmallow-preview03.jpg"
+                        ]'
+                        data-title="딸기우유 마시멜로우"
+                        data-type="상세페이지 디자인"
+                        data-description="딸기우유 마시멜로우 상품을 위한 상세페이지와 캐릭터 그래픽을 디자인한 프로젝트입니다.">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/unicon.jpg"
+                                alt="딸기우유 마시멜로우 썸네일">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>상세페이지 디자인</span>
+
+                        <h3>딸기우유 마시멜로우</h3>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             2025
+        ====================== -->
+
+        <section
+            class="archive-section"
+            id="year-2025">
+
+            <div class="archive-year-title">
+
+                <h2>2025</h2>
+
+            </div>
+
+
+            <div class="archive-grid">
+
+
+                <!-- 도트 캐릭터 -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/pixel-character-pink.png",
+                            "../assets/image/archive/full/pixel-character-blue.png",
+                            "../assets/image/archive/full/pixel-character-rabbit.png",
+                            "../assets/image/archive/full/pixel-monster.png"
+                        ]'
+                        data-title="도트 캐릭터 작업"
+                        data-type="PIXEL ART"
+                        data-description="개인 취미 작업으로 제작한 픽셀 아트 캐릭터 및 몬스터 작업입니다.">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/pixel-art.jpg"
+                                alt="도트 캐릭터 작업 썸네일">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>PIXEL ART</span>
+
+                        <h3>도트 캐릭터 작업</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 켓푸치노 -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/catpuchino.jpg"
+                        ]'
+                        data-title="켓푸치노"
+                        data-type="BRAND DESIGN"
+                        data-description="고양이 카페 ‘켓푸치노’를 주제로 제작한 브랜드 디자인 작업입니다.">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/catpuchino.jpg"
+                                alt="켓푸치노 브랜드 디자인 썸네일">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>BRAND DESIGN</span>
+
+                        <h3>켓푸치노</h3>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             2020
+        ====================== -->
+
+        <section
+            class="archive-section"
+            id="year-2020">
+
+            <div class="archive-year-title">
+
+                <h2>2020</h2>
+
+            </div>
+
+
+            <div class="archive-grid">
+
+
+                <!-- 메이플스토리 팬아트 -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/illustration-2020-01.jpg"
+                        ]'
+                        data-title="메이플스토리 팬아트"
+                        data-type="ILLUSTRATION"
+                        data-description="메이플스토리 루시드 캐릭터 팬아트 작업물입니다">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/illustration-2020-01.jpg"
+                                alt="2020 일러스트레이션 01">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>ILLUSTRATION</span>
+
+                        <h3>메이플스토리 팬아트</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LOL 팬아트 -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/illustration-2020-02.jpg"
+                        ]'
+                        data-title="LOL 팬아트"
+                        data-type="ILLUSTRATION"
+                        data-description="2020년에 제작한 개인 일러스트레이션 작업입니다.">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/illustration-2020-02.jpg"
+                                alt="2020 일러스트레이션 02">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>ILLUSTRATION</span>
+
+                        <h3>LOL 팬아트</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Halloween -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/illustration-2020-03.jpg"
+                        ]'
+                        data-title="Halloween"
+                        data-type="ILLUSTRATION"
+                        data-description="2020년에 제작한 할로윈 테마의 개인 일러스트레이션 작업입니다.">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/illustration-2020-03.jpg"
+                                alt="Halloween 일러스트레이션">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>ILLUSTRATION</span>
+
+                        <h3>Halloween</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 귀멸의 칼날 팬아트 -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/illustration-2020-04.jpg"
+                        ]'
+                        data-title="팬아트"
+                        data-type="ILLUSTRATION · FAN ART"
+                        data-description="2020년에 제작한 개인 팬아트 일러스트레이션 작업입니다.">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/illustration-2020-04.jpg"
+                                alt="시노부 팬아트 썸네일">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>ILLUSTRATION</span>
+
+                        <h3>귀멸의 칼날 팬아트</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 메이플스토리2 -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/illustration-2020-05.jpg"
+                        ]'
+                        data-title="메이플스토리2"
+                        data-type="ILLUSTRATION"
+                        data-description="2020년에 제작한 메이플스토리2 개인 팬아트 일러스트레이션 작업입니다.">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/illustration-2020-05.jpg"
+                                alt="메이플스토리2 팬아트 썸네일">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>ILLUSTRATION</span>
+
+                        <h3>메이플스토리2</h3>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             2018
+        ====================== -->
+
+        <section
+            class="archive-section"
+            id="year-2018">
+
+            <div class="archive-year-title">
+
+                <h2>2018</h2>
+
+            </div>
+
+
+            <div class="archive-grid">
+
+
+                <!-- 고담시티 VR Horror -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/gotham-logo.jpg"
+                        ]'
+                        data-title="고담시티 VR Horror"
+                        data-type="BRANDING · EDITORIAL DESIGN"
+                        data-description="대구 동성로 VR 공포 게임 체험방 고담시티의 브랜드 및 편집디자인 작업을 담당했습니다. 로고를 비롯해 홍보물, 인쇄물, 공간 그래픽, 입장권 팔지 등을 디자인을 했습니다.">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/gotham.jpg"
+                                alt="고담시티 VR Horror 썸네일">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>BRANDING · EDITORIAL DESIGN</span>
+
+                        <h3>고담시티 VR</h3>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 아직도 소환중입니다 -->
+                <article class="archive-card">
+
+                    <button
+                        class="archive-card-button"
+                        type="button"
+                        data-images='[
+                            "../assets/image/archive/full/summoning.jpg",
+                            "../assets/image/archive/full/summoning1.png",
+                            "../assets/image/archive/full/summoning2.png",
+                            "../assets/image/archive/full/summoning3.gif"
+                        ]'
+                        data-title="아직도 소환중입니다"
+                        data-type="GAME · CHARACTER · ANIMATION"
+                        data-description="모바일 게임 ‘아직도 소환중입니다’의 타이틀 로고 및 게임 그래픽 제작에 참여했습니다. 캐릭터 디자인 일부와 캐릭터 모션 작업을 했습니다.">
+
+                        <div class="archive-thumbnail">
+
+                            <img
+                                src="../assets/image/archive/thumb/summoning.jpg"
+                                alt="아직도 소환중입니다">
+
+                        </div>
+
+                    </button>
+
+
+                    <div class="archive-card-info">
+
+                        <span>GAME · CHARACTER · ANIMATION</span>
+
+                        <h3>아직도 소환중입니다</h3>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================
+         IMAGE MODAL
+    ====================== -->
+
+    <div
+        class="archive-modal"
+        id="archiveModal"
+        aria-hidden="true">
+
+
+        <button
+            class="archive-modal-close"
+            id="archiveModalClose"
+            type="button"
+            aria-label="닫기">
+
+            ×
+
+        </button>
+
+
+        <div class="archive-modal-inner">
+
+            <div id="archiveModalImages"></div>
+
+
+            <div class="archive-modal-info">
+
+                <span id="archiveModalType"></span>
+
+                <h2 id="archiveModalTitle"></h2>
+
+                <p id="archiveModalDescription"></p>
+
+
+                <a
+                    id="archiveModalLink"
+                    class="archive-modal-link"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    사이트 이동 →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../assets/js/archive.js"></script>
+</body>
+
+</html>
