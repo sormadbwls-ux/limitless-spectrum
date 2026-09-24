@@ -25,13 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.getAttribute("data-images")
             );
 
-            /* 작품별 이미지 레이아웃 */
-
-            modalImages.className = "archive-modal-images";
-
-            if (title === "아달군") {
-                modalImages.classList.add("adalgun-images");
-            }
 
             /* 기존 이미지 제거 */
 
@@ -39,21 +32,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             /* 이미지 생성 */
+if (title === "아달군") {
 
-            images.forEach((imageSrc, index) => {
+    const character = document.createElement("img");
 
-    const img = document.createElement("img");
+    character.src = images[0];
+    character.alt = title;
 
-    img.src = imageSrc;
-    img.alt = title || "";
+    character.classList.add("adalgun-character");
 
-    if (title === "아달군" && index === 0) {
-        img.classList.add("adalgun-character");
-    }
+    modalImages.appendChild(character);
 
-    modalImages.appendChild(img);
 
-});
+    const stickerGrid = document.createElement("div");
+
+    stickerGrid.classList.add("adalgun-sticker-grid");
+
+
+    images.slice(1).forEach(imageSrc => {
+
+        const img = document.createElement("img");
+
+        img.src = imageSrc;
+        img.alt = title;
+
+        stickerGrid.appendChild(img);
+
+    });
+
+
+    modalImages.appendChild(stickerGrid);
+
+} else {
+
+    images.forEach(imageSrc => {
+
+        const img = document.createElement("img");
+
+        img.src = imageSrc;
+        img.alt = title || "";
+
+        modalImages.appendChild(img);
+
+    });
+
+}
 
 
             /* 정보 */
